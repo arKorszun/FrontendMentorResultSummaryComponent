@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,8 +16,78 @@
     body{
       font-family: "Hanken Grotesk", sans-serif;
     }
+    .container{
+      display: grid;
+      grid-template-columns: 320px 320px;
+      grid-template-rows: 450px 450px;
+    }
+    .result{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: ;
+      background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+      border-radius: 20px;
+    }
+    .result-title{
+      font-size: 10px;
+      color:gainsboro;
+      margin: 20px;
+      
+    }
+    .result-title > h1{
+      font-weight: 500;
+    }
+    .score{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-basis:160px;
+      width: 160px;
+      color: white;
+      background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    }
+    .score-points{
+      font-size: 55px;
+      font-weight: 700;
+      margin-bottom: 0px;
+      margin-top: 20px;
+      
+    }
+    .of-points{
+      margin-top: 0px;
+      font-size: small;
+      font-weight: 500;
+      color: rgb(163, 163, 163)
+    }
 
-    
+    .evaluation{
+      font-size: 24px;
+      font-weight: 600;
+      color: white;
+      margin-top: 5px;
+      margin-bottom: 0px;
+    }
+
+    .description{
+      width:67%;
+
+    }
+
+    .description > p{
+      color:gainsboro;
+      margin-top: 0px;
+      margin-left: 0px;
+      text-align: center;
+    }
+
+    .summary{
+      display: flex;
+      flex-direction: column;
+    }
+
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,11 +97,11 @@
 <div class="container">
   <div class="result">
     <div class="result-title">
-      <h1>Your result</h1>
+      <h1>Your Result</h1>
     </div>
     <div class="score">
-      <p>76</p>
-      <p>of 100</p>
+      <p class="score-points">76</p>
+      <p class="of-points">of 100</p>
     </div>
     <div class="evaluation">
       <p>Great</p>
@@ -40,23 +110,23 @@
       <p>You scored higher than 65% of the people who have taken these tests.</p>
     </div>
   </div>
-  <div class="summary"></div>
+  <div class="summary">
     <div class="summary-title">
       <h2>Summary</h2>
     </div>
-    <div class="reaction">
+    <div class="points reaction">
       <p>Reaction</p>
       <p>80 / 100</p>
     </div>
-    <div class="memory">
+    <div class="points memory">
       <p>Memory</p>
       <p>92 / 100</p>
     </div>
-    <div class="verbal">
+    <div class="points verbal">
       <p>Verbal</p>
       <p>61 / 100</p>
     </div>
-    <div class="visual">
+    <div class="points visual">
       <p>Visual</p>
       <p>72 / 100</p>
     </div>
@@ -67,7 +137,7 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Arkadiusz Korszuń</a>.
     </div>
-
+  </div>
 </div>
  
   
